@@ -6,13 +6,15 @@ import lombok.Data;
 
 /**
  * @author 鼠笑天
- * @date 2018/12/19
+ * @date 2018/8/5
  */
 @Data
-@TableName("t_config")
-public class ConfigDO {
-//    @TableId(value = "id")
-    private Long id;
+@TableName("t_order")
+public class OrderDO {
+    @TableId(value = "order_id")
+    private Long orderId;
 
-    private String name;
+    @TableId(value = "user_id")
+    private Long userId;
+
 }

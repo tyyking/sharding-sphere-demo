@@ -36,10 +36,11 @@ public class UserServiceTest {
     public void testUser() {
         for (long i = 0; i < 10; i++) {
             UserDO userDO = new UserDO();
+            //userDO.setUserId(i);
             userDO.setUsername(faker.name().lastName() + faker.name().firstName());
             userDO.setPassword("123456");
             userDAO.insert(userDO);
-            // log.info("user id:{}", userDO.getUserId());
+            log.info("user id:{}", userDO.getUserId());
         }
     }
 }

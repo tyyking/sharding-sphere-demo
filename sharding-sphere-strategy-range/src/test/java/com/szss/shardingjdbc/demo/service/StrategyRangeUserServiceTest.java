@@ -35,13 +35,14 @@ public class StrategyRangeUserServiceTest {
 
     @Test
     public void testInsertUser() {
-        // for (long i = 0; i < 10; i++) {
+         for (long i = 0; i < 10; i++) {
         UserDO userDO = new UserDO();
         userDO.setUsername(faker.name().lastName() + faker.name().firstName());
         userDO.setPassword("123456");
-        userDAO.insertUser(userDO);
-        // log.info("user id:{}", userDO.getUserId());
-        // }
+             Long aLong = userDAO.insertUser(userDO);
+             System.out.println(aLong);
+             log.info("user id:{}", userDO.getUserId());
+         }
     }
 
     @Test
